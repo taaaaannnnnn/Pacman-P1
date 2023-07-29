@@ -11,7 +11,21 @@ import time
  
 
 class SearchAgent(Agent):
- 
+    """
+    This very general search agent finds a path using a supplied search
+    algorithm for a supplied search problem, then returns actions to follow that
+    path.
+
+    As a default, this agent runs DFS on a PositionSearchProblem to find
+    location (1,1)
+
+    Options for fn include:
+      depthFirstSearch or dfs
+      breadthFirstSearch or bfs
+
+
+    Note: You should NOT change any code in SearchAgent
+    """
 
     def __init__(self, fn='depthFirstSearch', prob='PositionSearchProblem', heuristic='nullHeuristic'):
         # Warning: some advanced Python magic is employed below to find the right functions and problems
@@ -31,7 +45,7 @@ class SearchAgent(Agent):
             else:
                 raise AttributeError, heuristic + ' is not a function in searchAgents.py or search.py.'
             print('[SearchAgent] using function %s and heuristic %s' % (fn, heuristic))
-            
+            # Note: this bit of Python trickery combines the search algorithm and the heuristic
             self.searchFunction = lambda x: func(x, heuristic=heur)
 
         # Get the search problem type from the name
