@@ -15,8 +15,9 @@ class SearchProblem:
     You do not need to change anything in this class, ever.
     """
 
-    def getStartS212tate(self):
-        """
+
+    def getStartS2212tate(self):
+     """
         Returns the start state for the search problem.
         """
         util.raiseNotDefined()
