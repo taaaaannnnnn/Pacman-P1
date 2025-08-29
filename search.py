@@ -15,7 +15,7 @@ class SearchProblem:
     You do not need to change anything in this class, ever.
     """
 
-    def getStartState(self):
+    def getStartS212tate(self):
         """
         Returns the start state for the search problem.
         """
